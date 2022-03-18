@@ -1,21 +1,21 @@
 import React from "react";
 import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 
-function RenderCard({ item }) {
+function RenderCard({item}) {
   return (
-    <card>
+    <Card>
       <CardImg src={item.image} alt={item.name} />
       <CardBody>
         <CardTitle>{item.name}</CardTitle>
         <CardText>{item.description}</CardText>
       </CardBody>
-    </card>
+    </Card>
   );
 }
 
 function Home(props) {
   return (
-    <div className="contianer">
+    <div className="container">
       <div className="row">
         <div className="col-md m-1">
           <RenderCard item={props.campsite} />

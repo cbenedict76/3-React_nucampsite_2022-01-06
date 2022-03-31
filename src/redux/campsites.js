@@ -1,6 +1,4 @@
 // import { CAMPSITES } from "../shared/campsites";
-// import { bindActionCreators } from 'redux';
-// import * ActionTypes from './ActionTypes';
 import * as ActionTypes from './ActionTypes';
 
 // export const Campsites = (state = CAMPSITES, action) => {
@@ -21,7 +19,6 @@ export const Campsites = (state = {
     case ActionTypes.CAMPSITES_LOADING:
       return {...state, isLoading: true, errMess: null, campsites: []}
     case ActionTypes.CAMPSITES_FAILED:
-      // return {...state, isLoading: false, errMess: bindActionCreators.payload}
       return {...state, isLoading: false, errMess: action.payload}
     default:
       return state;
